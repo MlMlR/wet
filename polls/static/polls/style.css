@@ -1,0 +1,32 @@
+li a {
+    color: green;
+}
+
+body {
+    background: rgb(64, 64, 80);
+}
+
+/* Apply some basic styles to the navigation bar */
+.topnav {
+    background-color: transparent;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style the navigation links */
+.topnav a {
+    color: lightgrey;
+    text-decoration: none;
+    padding: 20px 30px;
+    border-bottom: 2px solid white;
+    transition: border-bottom 0.3s;
+    margin-right: 30px; 
+}
+
+/* Add an underline on hover */
+.topnav a:hover {
+    color: aqua;
+    border-bottom: 2px solid aqua;
+}
+

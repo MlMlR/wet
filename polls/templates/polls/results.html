@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
+  {% load poll_extras %}
+
   <head>
     <meta charset="utf-8" />
     <title>Polls</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
   </head>
 
   <body>
+    {% include 'topnav.html' %}
     <h1>{{ question.question_text }}</h1>
 
     <ul>
-    {% for choice in question.choice_set.all %}
-        <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
-    {% endfor %}
-    </ul>
+      {% for choice in question.choice_set.all %}
+          <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}
+              <div style="background-color:{{ choice|get_random_bright_color }}; height:20px; width: {{ choice.votes|times:10 }}px;"></div>
+          </li>
+      {% endfor %}
+  </ul>
     
-    <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+    <a href="{% url 'polls:index' %}">back</a>
   </body>
 
 </html>
