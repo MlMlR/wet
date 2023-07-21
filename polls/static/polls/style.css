@@ -3,7 +3,6 @@ li a {
 }
 
 body {
-    background: rgb(64, 64, 80);
 }
 
 /* Apply some basic styles to the navigation bar */
@@ -16,10 +15,9 @@ body {
 
 /* Style the navigation links */
 .topnav a {
-    color: lightgrey;
     text-decoration: none;
     padding: 20px 30px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid ;
     transition: border-bottom 0.3s;
     margin-right: 30px; 
 }
